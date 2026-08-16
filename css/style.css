@@ -11,7 +11,30 @@
 html {
     scroll-behavior: smooth;
 }
+/* =========================
+   COLORES OFICIALES
+   UNDERTHING
+========================= */
 
+:root {
+    --rosa-principal: #EC4899;
+    --rosa-oscuro: #8E2858;
+    --rosa-profundo: #C02674;
+
+    --rosa-claro: #FFD6E5;
+    --rosa-suave: #FFF5F9;
+    --rosa-medio: #F8A9C4;
+
+    --blanco: #FFFFFF;
+    --crema: #FFF0F6;
+
+    --texto: #75405A;
+    --texto-suave: #95627B;
+
+    --borde: #F8C5D9;
+
+    --sombra: rgba(232, 62, 140, 0.18);
+}
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fff5f9;
@@ -1579,4 +1602,81 @@ h1 {
         font-size: 35px;
     }
 
+}
+ /* =========================
+   IMÁGENES DE PRODUCTOS
+========================= */
+
+.producto-placeholder {
+    overflow: hidden;
+    position: relative;
+}
+
+.producto-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+/* Efecto al pasar el mouse */
+
+.producto-card:hover .producto-placeholder img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   IMÁGENES DE CATEGORÍAS
+========================= */
+
+.categoria-imagen {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fce4ef;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* =========================
+   IMÁGENES RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .producto-placeholder img {
+        object-fit: cover;
+    }
+
+    .categoria-imagen img {
+        object-fit: cover;
+    }
+
+}
+.categoria-imagen {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fce5f0;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
